@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Trello</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/select2.css" rel="stylesheet"/>
+    <link href="css/main.css" rel="stylesheet"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/underscore-min.js"></script>
+    <script src="js/backbone.js"></script>
+    <script src="js/backbone-localstorage.js"></script>
+    <script src="js/select2.js"></script>
+    <script src="js/Models.js"></script>
+    <script src="js/TrelloChrome.js"></script>
+    <script src="js/onload.js"></script>
+</head>
+<body id="main">
+<div id="loggedOut" style="display:none">
+    <div class="jumbotron align-center">
+        <p><a id="connectLink" href="#" class="btn btn-success btn-lg">Setup Chromello</a></p>
+        <p>Click the big green button to setup Chromello.</p>
+    </div>
+</div>
+
+<div id="loggedIn" class="container">
+    <div id="content">
+        <div id="create-card" class="row">
+            <form id="create-card-form" class="form-group">
+                <div class="form-group row">
+                    <div class="col-md-6 col-xs-6">
+                        <input id="create-card-board" type="hidden"
+                                tabindex="1" />
+                    </div>
+                    <div class="col-md-6  col-xs-6">
+                        <input type="hidden" id="create-card-lists" tabindex="2" />
+                    </div>
+                </div>
+
+                <p>
+                    <textarea id="create-card-text"
+                              class="form-control card"
+                              placeholder="Card"
+                              tabindex="3"
+                              autofocus></textarea>
+                </p>
+
+                <p>
+                    <button type="submit"
+                            class="btn btn-success pull-right"
+                            id="create-card-submit"
+                            tabindex="4">Create</button>
+                </p>
+            </form>
+        </div>
+
+        <div id="card-create-status" class="row">
+        </div>
+    </div>
+</div>
+
+
+<!-- Some templates -->
+<script type="text/template" id="board-list-select-template">
+    <option value="<%= id %>" <%= selected %>><%= name %></option>
+</script>
+
+<script type="text/template" id="board-template">
+    <a href="<%= url %>" target="_blank"><%= name %></a>
+</script>
+
+<script type="text/template" id="card-created-template">
+    <div class="alert card" id="card-created">
+        <a href="<%= url %>" target="_blank"><%= name %></a>
+    </div>
+</script>
+
+</body>
+</html>

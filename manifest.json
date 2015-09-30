@@ -1,0 +1,25 @@
+{
+   "background": {
+      "scripts": [ "js/jquery.min.js", "js/underscore-min.js", "js/stringscore.min.js", "js/Omnibox.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html",
+      "default_title": "Trello"
+   },
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "description": "Quickly create Trello cards and access your Trello boards from the Omnibox.",
+   "icons": {
+      "128": "icon.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApWp3HHBE9PQOVsSu4gYNnP17t1XyUTDo+i3+qJGZNwuathKQ9szvfpKBnQGdhZ1QIfjkvna4Y9hTeTSnQi7v6mt4qmLTLf3wksUXIXsLwdpa0/WIIn2hDUDBt+4faIkWu/ZPik8yxnzeaqy6+I8EdJKpBBI1SbY7CcPxZDZ5pqVsFsVYgvghlvSHOVsXA5rDyL98WlH0mzgWyAuj3xeSn3JAiGVbdQHjzR+eX7O5NDuWey/G+otzJ4NOjkQJyotMc4rOkPP5J8XKB6i8rSQRsuo0UWOxtuwFBGfgdGr1x2HL/ooi2Qi4w9jIoeVIIsWoDiF3E5MgcnlvVplurstTBwIDAQAB",
+   "manifest_version": 2,
+   "name": "Chromello for Trello",
+   "omnibox": {
+      "keyword": "t"
+   },
+   "permissions": [ "tabs", "https://trello.com/" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.4",
+   "web_accessible_resources": [ "token.html", "js/jquery.min.js", "js/bootstrap.min.js", "js/TokenWindowHandler.js" ]
+}
